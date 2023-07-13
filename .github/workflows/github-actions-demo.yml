@@ -1,7 +1,9 @@
+- name: Edit or Read any JSON
+  uses: RadovanPelka/github-action-json@v1.0.1
+  with:
+    path: "workflow-actions/package.json"
+
 name: Boot project
-uses: RadovanPelka/github-action-json@v1.0.1
-with:
-  path: "workflow-actions/package.json"
 run-name: ${{ github.actor }} released the version ${{ steps.packageJson.outputs.version }}
 on:
   push:
